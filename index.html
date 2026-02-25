@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="reset.css">
+    <script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/sw.js");
+  }
+</script>
     <style>
         html * {
             box-sizing: border-box;
@@ -34,8 +40,10 @@
             height: calc(50% - 15px);
             flex: 1 1 40%;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            gap: 20px;
             font-size: 5vw;
             font-weight: 900;
             color: black;
@@ -43,15 +51,22 @@
         a {
             text-decoration: none;
         }
+        .room > span {
+            font-size: 2vw;
+            height: auto;
+            text-align: center;
+            font-weight: 500;
+            color: #999999;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="flex">
-            <a href="./room1.html" id="room1" class="room">Room 1</a>
-            <a href="./room2.html" id="room2" class="room">Room 2</a>
-            <a href="./room3.html" id="room3" class="room">Room 3</a>
-            <a href="./room4.html" id="room4" class="room">Room 4</a>
+            <a href="./room1.html" id="room1" class="room">Room 1<span>(대표님)</span></a>
+            <a href="./room2.html" id="room2" class="room">Room 2<span>(영철이사님)</span></a>
+            <a href="./room3.html" id="room3" class="room">Room 3<span>(박인수본부장님)</span></a>
+            <a href="./room4.html" id="room4" class="room">Room 4<span>(혜진이사님)</span></a>
         </div>
     </div>
 </body>

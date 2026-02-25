@@ -1,10 +1,11 @@
 {
     "name": "임원실 태블릿",
-    "short_name": "태블릿 홈",
-    "start_url": "/index.html",  
-    "display": "fullscreen",     
-    "background_color": "#ffffff",
-    "theme_color": "#ffffff",
+  "short_name": "태블릿 홈",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
     "icons": [
       {
         "src": "/img/icon-192x192.png", 
